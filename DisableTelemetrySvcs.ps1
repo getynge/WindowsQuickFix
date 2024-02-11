@@ -13,3 +13,6 @@ if (!$winPrinciple.IsInRole($adminRole)) {
 
 Set-Service -StartupType Disabled dmwappushservice
 Get-ScheduledTask -TaskPath "\Microsoft\Windows\Customer Experience Improvement Program" | Disable-ScheduledTask
+
+Write-Host -NoNewLine 'Press any key to continue...';
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');

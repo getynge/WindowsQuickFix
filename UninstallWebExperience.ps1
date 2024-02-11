@@ -12,3 +12,6 @@ if (!$winPrinciple.IsInRole($adminRole)) {
 }
 
 winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy
+
+Write-Host -NoNewLine 'Press any key to continue...';
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
