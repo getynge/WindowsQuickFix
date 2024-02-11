@@ -11,8 +11,8 @@ if (!$winPrinciple.IsInRole($adminRole)) {
     exit
 }
 
-bcdedit /deletevalue disabledynamictick yes
-bcdedit /deletevalue useplatformclock yes
+bcdedit /set disabledynamictick yes
+bcdedit /set useplatformclock yes
 
 Write-Host -NoNewLine 'Press any key to continue...';
 $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
